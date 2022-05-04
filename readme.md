@@ -45,3 +45,7 @@ Here's how to delete messages that have already been scheduled.
 4. Run either `node delete.js` or `npm run delete`
 5. Once successfully run, a log file will save in `./logs/deleted-{unix-timestamp}.log`
    * Example: `./logs/delete-1651641282.log`
+
+## Gotchas & Known Issues
+1. The first scheduled post runs at the desired time + the offset. Meaning if you want to have the schedule start at 9:00 am and your offset is 30 minutes, you need to have your start time at 8:30 am.
+2. All times are in Central Time (America/Chicago).
