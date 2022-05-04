@@ -73,7 +73,7 @@ for (let i = 0; i < facts.length; i++) {
 
 function exit() {
     //fs.writeFile('./log-'+ moment().tz("America/Chicago").format("Y-m-d-H-m-s")+'.json',log).then(()=>{
-    fs.writeFile('log-'+now.unix()+'.json', JSON.stringify(log))
+    fs.writeFile('./logs/log-'+now.unix()+'.json', JSON.stringify(log))
         .then((response) => {
             process.exit();
         }).catch((e) => {
