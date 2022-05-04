@@ -29,7 +29,7 @@ const app = new App({
 // Unix timestamp for tomorrow morning at 9AM
 const today = moment.tz('2022-05-03 14:20', 'America/Chicago').unix();
 //console.log(today);
-const now = moment.tz("America/Chicago");
+const now = moment.tz("2022-05-04 9:00","America/Chicago");
 
 
 // Channel you want to post the message to
@@ -66,7 +66,7 @@ async function publishMessage(channelId, blocks, text, time, attempt) {
 
 for (let i = 0; i < facts.length; i++) {
     let attempt = i + 1;
-    let time = now.add(10, "seconds");
+    let time = now.add(20, "minutes");
     let schedule = time.unix();
     publishMessage("C03DXGGA02W", facts[i].blocks, facts[i].text, schedule, attempt);
     //console.log(facts[i],time.format('Y-m-d H:m:s'));
