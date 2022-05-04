@@ -8,6 +8,7 @@ const fs = require('fs').promises;
 /*console.log(process.env.SLACK_SIGNING_SECRET);
 console.log(process.env.SLACK_BOT_TOKEN);
 console.log(facts.length);*/
+//console.log(facts.length);
 
 let log = []; // Log the output so we can stick it in the log.json file.
 let errors = []; // Log errors so we can stick it in the error.json file.
@@ -65,12 +66,10 @@ async function publishMessage(channelId, blocks, text, time, attempt) {
 
 for (let i = 0; i < facts.length; i++) {
     let attempt = i + 1;
-    let time = now.add(30, "seconds");
+    let time = now.add(10, "seconds");
     let schedule = time.unix();
     publishMessage("C03DXGGA02W", facts[i].blocks, facts[i].text, schedule, attempt);
     //console.log(facts[i],time.format('Y-m-d H:m:s'));
-
-        break;
 
 }
 
