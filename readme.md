@@ -1,5 +1,6 @@
 # Star Wars Day Bot
 A fun Slack App to spit out various Star Wars related content throughout the day on May 4th!
+![May the 4th be With You!](./readme/may-the-4th-be-with-you-bg.jpeg)
 
 ## Installation / Set up
 ### Environment Variables
