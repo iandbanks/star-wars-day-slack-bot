@@ -22,10 +22,10 @@ const app = new App({
 })();
 const now = moment.tz("America/Chicago");
 
-// Channel you want to post the message to
-const channelId = "C029BEVUX";
+// ENV Vars
+const channelId = process.env.CHANNEL_ID; // Channel you want to post the message to
 
-async function deletemessage(messageId, channelId, attempt) {
+async function deletemessage(messageId, attempt) {
 
     try {
         // Call the chat.scheduleMessage method using the WebClient
@@ -52,17 +52,12 @@ async function deletemessage(messageId, channelId, attempt) {
 
 for (let i = 0; i < toDelete.length; i++) {
     let attempt = i + 1;
-    //let time = now.add(20, "minutes");
-    //let schedule = time.unix();
-    //publishMessage("C03DXGGA02W", facts[i].blocks, facts[i].text, schedule, attempt); // Test Channel
-    //publishMessage("C029BEVUX", facts[i].blocks, facts[i].text, schedule, attempt); // Water Cooler
-    deletemessage(toDelete[i].scheduled_message_id, "C029BEVUX", attempt);
-    //console.log(facts[i],time.format('Y-m-d H:m:s'));
+    deletemessage(toDelete[i].scheduled_message_id, attempt);
 }
 
 function exit() {
     //fs.writeFile('./log-'+ moment().tz("America/Chicago").format("Y-m-d-H-m-s")+'.json',log).then(()=>{
-    fs.writeFile('deleted' + now.unix() + '.json', JSON.stringify(log))
+    fs.writeFile('./logs/deleted-' + now.unix() + '.json', JSON.stringify(log))
         .then((response) => {
             process.exit();
         }).catch((e) => {

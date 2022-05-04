@@ -28,5 +28,20 @@ Once you have set everything up, you are ready to schedule the messages.
     * Example: `./logs/log-1651641319.log`
 
 ### Deleting Messages
-Woopsies happen. Here's how to delete messages that have already been scheduled.
-1. Create a new document called
+Woopsies happen. This is why we have logs 😜.
+Here's how to delete messages that have already been scheduled.
+1. Locate the log that contains the schedule(s) you want to delete. You'll find it in the `./logs/` directory.
+2. Locate the `toDelete.js` file.
+3. You can either delete everything, or choose what to delete.
+    1. Delete everything
+       1. Copy the entire log file.
+       2. Navigate to `toDelete.js`.
+       3. Delete the empty `[]`.
+       4. Paste the log file array where the empty array previously was located.
+    2. Choose what to delete
+       1. Copy the full log object(s) you want to delete into the `toDelete.js` array. 
+       2. Make sure that it contains the `scheduled_message_id` parameter. If it doesn't...this will fail!
+       3. Run the new [JSON array through a validator just in case](https://jsonlint.com/).
+4. Run either `node delete.js` or `npm run delete`
+5. Once successfully run, a log file will save in `./logs/deleted-{unix-timestamp}.log`
+   * Example: `./logs/delete-1651641282.log`
