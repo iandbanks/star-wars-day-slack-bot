@@ -21,8 +21,12 @@ A fun Slack App to spit out various Star Wars related content throughout the day
 1. Run `npm install`
 
 ## Usage
-### Scheduling
+### Scheduling Messages
 Once you have set everything up, you are ready to schedule the messages.
 1. Run either `node app.js` or `npm run schedule`
 2. Once successfully run, a log file will save in `./logs/log-{unix-timestamp}.log`
     * Example: `./logs/log-1651641319.log`
+
+### Deleting Messages
+Woopsies happen. Here's how to delete messages that have already been scheduled.
+1. Create a new document called
