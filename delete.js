@@ -56,7 +56,7 @@ for (let i = 0; i < toDelete.length; i++) {
     //let schedule = time.unix();
     //publishMessage("C03DXGGA02W", facts[i].blocks, facts[i].text, schedule, attempt); // Test Channel
     //publishMessage("C029BEVUX", facts[i].blocks, facts[i].text, schedule, attempt); // Water Cooler
-    deletemessage(toDelete[i].scheduled_message_id, "C03DXGGA02W", attempt);
+    deletemessage(toDelete[i].scheduled_message_id, "C029BEVUX", attempt);
     //console.log(facts[i],time.format('Y-m-d H:m:s'));
 }
 

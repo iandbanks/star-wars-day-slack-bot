@@ -1,6 +1,6 @@
 const facts = [
     {
-        text: "*Happy Star Wars Day!* This year <@U02CF0NV8> and <@U02CEA0T3> created me, the Star wars Day bot! Throughout the day I'll share fun Star Wars videos, trivia, and jokes in celebration of this day!",
+        text: "*Happy Star Wars Day!* This year <@U02CF0NV8> and <@U02CEA0T3> created me, the Star Wars Day bot! Throughout the day I'll share fun Star Wars videos, trivia, and jokes in celebration of this day!",
         blocks: [
             {
                 "type": "header",
@@ -19,7 +19,7 @@ const facts = [
                 "type": "section",
                 "text": {
                     "type": "mrkdwn",
-                    "text": "*Happy Star Wars Day!* This year <@U02CF0NV8> and <@U02CEA0T3> created me, the May the 4th bot! Throughout the day I'll share fun Star Wars videos, trivia, and jokes in celebration of this day!"
+                    "text": "*Happy Star Wars Day!* This year <@U02CF0NV8> and <@U02CEA0T3> created me, the Star Wars Day bot! Throughout the day I'll share fun Star Wars videos, trivia, and jokes in celebration of this day!"
                 }
             },
             {

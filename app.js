@@ -30,7 +30,7 @@ const app = new App({
 const today = moment.tz('2022-05-03 14:20', 'America/Chicago').unix();
 //console.log(today);
 const now = moment.tz("America/Chicago");
-const start = moment.tz("2022-05-04 9:00:00","Y-M-D H:m:s","America/Chicago");
+const start = moment.tz("2022-05-04 8:40:00","Y-M-D H:m:s","America/Chicago");
 //console.log(start.unix());
 
 
