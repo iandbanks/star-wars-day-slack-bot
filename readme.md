@@ -22,6 +22,16 @@ A fun Slack App to spit out various Star Wars related content throughout the day
 1. Run `npm install`
 
 ## Usage
+
+### Creating Messages
+So you don't like my default messages huh? That's ok, you can make your own.
+
+* Head over to [facts.js](./facts.js)
+* You'll notice an array filled with fact objects. These objects use Slacks [Block Kit](https://api.slack.com/block-kit) to create rich, dynamic messages. This is Star Wars we're talking about, we gotta have videos and images, and it's gotta LOOK GOOD!
+  * Helpful hint: Use the [Slack Formatting Reference](https://api.slack.com/reference/surfaces/formatting) in combination with block kit to do cool stuff.
+* Build your content with the block kit, and put it in the facts.js array.
+  * Helpful hint: It should be a single object with a parameter `blocks`
+
 ### Scheduling Messages
 Once you have set everything up, you are ready to schedule the messages.
 1. Run either `node app.js` or `npm run schedule`
@@ -48,5 +58,5 @@ Here's how to delete messages that have already been scheduled.
    * Example: `./logs/delete-1651641282.log`
 
 ## Gotchas & Known Issues
-1. The first scheduled post runs at the desired time + the offset. Meaning if you want to have the schedule start at 9:00 am and your offset is 30 minutes, you need to have your start time at 8:30 am.
+1. The first scheduled post runs at the desired time + the offset. Meaning if you want to have the schedule start at 9:00 am and your offset is 30 minutes, you need to have your start time at 8:30 am. Why didn't I just fix this? Well...because I'm busy and only had a couple hours to build this thing.
 2. All times are in Central Time (America/Chicago).
