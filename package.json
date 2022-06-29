@@ -1,6 +1,6 @@
 {
   "name": "star-wars-day-bot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "app.js",
   "scripts": {
@@ -15,6 +15,5 @@
     "moment": "^2.29.3",
     "moment-timezone": "^0.5.34"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
